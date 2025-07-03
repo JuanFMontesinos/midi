@@ -10,7 +10,7 @@ interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
 	author: 'Juan Montesinos', // Site author
-	title: 'Canyoning in Europe', // Site title.
+	title: 'midi in Europe', // Site title.
 	description: 'Blog about cayoning in Europe', // Description to display in the meta tags
 	lang: 'en-GB',
 	ogLocale: 'en_GB',
