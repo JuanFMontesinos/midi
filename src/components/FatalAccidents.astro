@@ -1,0 +1,154 @@
+---
+import jsonData from '../assets/accidents.json'
+
+function groupEventsByCountryYear(events) {
+	const groupedEvents = {}
+	events.forEach((event) => {
+		const key = `${event.country}-${event.year}`
+		if (!groupedEvents[key]) {
+			groupedEvents[key] = []
+		}
+		groupedEvents[key].push(event)
+	})
+	return groupedEvents
+}
+
+function calculateStatistics(events) {
+	let totalDeceased = 0
+	const deceasedPerMonth = {}
+	const deceasedPerYear = {}
+
+	events.forEach((event) => {
+		const date = new Date(event.date.split('/').reverse().join('-'))
+		const year = date.getFullYear()
+		const month = date.getMonth() + 1 // Months are zero-indexed
+
+		const deceasedCount = event.deceased.length
+
+		totalDeceased += deceasedCount
+
+		if (!deceasedPerYear[year]) {
+			deceasedPerYear[year] = 0
+		}
+		deceasedPerYear[year] += deceasedCount
+
+		const monthKey = `${year}-${month.toString().padStart(2, '0')}`
+		if (!deceasedPerMonth[monthKey]) {
+			deceasedPerMonth[monthKey] = 0
+		}
+		deceasedPerMonth[monthKey] += deceasedCount
+	})
+
+	return { totalDeceased, deceasedPerMonth, deceasedPerYear }
+}
+
+const groupedEvents = groupEventsByCountryYear(jsonData)
+const index = Object.keys(groupedEvents).map((key) => {
+	const [country, year] = key.split('-')
+	return { country, year, key }
+})
+
+const stats = calculateStatistics(jsonData)
+---
+
+<style>
+	.statistics {
+		margin-bottom: 2rem;
+	}
+	.event-group {
+		margin-bottom: 2rem;
+	}
+	.event-details {
+		margin-bottom: 1rem;
+	}
+	.event-details div {
+		margin: 0.25rem 0;
+	}
+	nav ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	nav li {
+		margin: 0.5rem 0;
+	}
+</style>
+
+<div class='statistics'>
+	<h2>Statistics</h2>
+	<div><strong>Total Deceased:</strong> {stats.totalDeceased}</div>
+	<div><strong>Deceased per Year:</strong></div>
+	<ul>
+		{
+			Object.entries(stats.deceasedPerYear).map(([year, count]) => (
+				<li key={year}>
+					{year}: {count}
+				</li>
+			))
+		}
+	</ul>
+	<div><strong>Deceased per Month:</strong></div>
+	<ul>
+		{
+			Object.entries(stats.deceasedPerMonth).map(([month, count]) => (
+				<li key={month}>
+					{month}: {count}
+				</li>
+			))
+		}
+	</ul>
+</div>
+
+<nav>
+	<h2>Index</h2>
+	<ul>
+		{
+			index.map(({ country, year, key }) => (
+				<li key={key}>
+					<a href={`#${key}`}>
+						{country} ({year})
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+{
+	Object.entries(groupedEvents).map(([key, events]) => {
+		const [country, year] = key.split('-')
+		return (
+			<div class='event-group' id={key} key={key}>
+				<h2>
+					{country} ({year})
+				</h2>
+				{events.map((event) => (
+					<div class='event-details' key={event.title}>
+						<h3>{event.title}</h3>
+						<div>{event.description}</div>
+						<div>
+							<strong>Tags: </strong> {event.tags.join(' ')}
+						</div>
+						<div>
+							<strong>When: </strong> {event.date}
+						</div>
+						<div>
+							<strong>Possible reason: </strong> {event.reason}
+						</div>
+						<div>
+							<strong>Where: </strong> <a href={event.location.link}>{event.location.canyon}</a>
+						</div>
+						<div>
+							<strong>Local news:</strong>
+							{event.media.map((media, index) => (
+								<span key={media.link}>
+									<a href={media.link}>{media.resource}</a>
+									{index < event.media.length - 1 ? ', ' : ''}
+								</span>
+							))}
+						</div>
+					</div>
+				))}
+			</div>
+		)
+	})
+}

@@ -1,0 +1,56 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
+import BaseLayout from '@/layouts/BaseLayout'
+import BlogTimeline from '@/components/BlogTimeline'
+
+const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+	(a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+		b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+const description = `Juan Montesinos's posts, Currently written ${posts.length} articles. Let's keep up the good work!`
+const URL = Astro.url.href
+
+// Replace the following values with your actual site information
+const siteTitle = 'Your Blog Title'
+const siteDescription = 'A brief description of your blog.'
+const siteUrl = 'https://juanmontesinos.com/canyoning'
+---
+
+<BaseLayout
+	title='Timeline'
+	description={description}
+	structuredData={{
+		'@context': 'https://schema.org',
+		'@type': 'WebPage',
+		inLanguage: 'en-US',
+		'@id': URL,
+		url: URL,
+		name: `Timeline - ${siteTitle}`,
+		description: description,
+		isPartOf: {
+			'@type': 'WebSite',
+			url: siteUrl,
+			name: siteTitle,
+			description: siteDescription
+		}
+	}}
+>
+	<section class='mx-auto max-w-[85rem] mt-10 lg:mt-10 px-4 py-10 sm:px-6 lg:px-8 lg:py-14'>
+		<div class='max-w-3xl mx-auto mb-10 lg:mb-14'>
+			<h2
+				class='text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight'
+			>
+				Timeline
+			</h2>
+			<p class='mt-4 text-lg group text-pretty text-neutral-600 dark:text-neutral-400'>
+				Currently written <span class='group-hover:text-yellow-500 group-hover:dark:text-yellow-400'
+					>{posts.length}</span
+				> articles. Let's keep up the good work! 💪
+			</p>
+		</div>
+		<div class='flex flex-col gap-4'>
+			{posts.map((p) => <BlogTimeline blog={p} />)}
+		</div>
+	</section>
+</BaseLayout>

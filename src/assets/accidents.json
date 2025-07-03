@@ -1,0 +1,178 @@
+[
+	{
+		"title": "35 m. fall from a rappel",
+		"country": "Spain",
+		"deceased": [
+			{
+				"name": "Javier Braojos",
+				"age": "47",
+				"sex": "male",
+				"nationality": "Spanish"
+			}
+		],
+		"year": 2024,
+		"description": "Javier Braojos, a 47-year-old Spanish policeman passed away after falling from a rappel.",
+		"tags": ["Aragon", "Pyrenees", "Spain"],
+		"date": "09/05/2024",
+		"reason": "Unknown.",
+		"location": {
+			"canyon": "Barranco Sía",
+			"link": "https://www.docuwiki.infobarrancos.es/doku.php?id=barrancos:huesca:sia"
+		},
+		"media": [
+			{
+				"resource": "Heraldo de Aragon",
+				"link": "https://www.heraldo.es/noticias/aragon/huesca/2024/05/10/muere-otro-barranquista-al-caer-en-un-rapel-en-yesero-1732593.html"
+			}
+		]
+	},
+	{
+		"title": "Drowned",
+		"country": "Spain",
+		"deceased": [
+			{
+				"name": "Miguel Ángel Hernández Andrés",
+				"age": "35",
+				"sex": "male",
+				"nationality": "Spanish"
+			}
+		],
+		"year": 2024,
+		"description": "Miguel Ángel Hernández Andrés, a 35-year-old Spanish firefighter passed drowned in a sensible rappel.",
+		"tags": ["Aragon", "Pyrenees", "Spain"],
+		"date": "30/04/2024",
+		"reason": "High (yet not impossible) flow. Alone. Personal hypothesis: 90-meter rappel split into 2x45m with a water pool in between. With high flow, the waterfall can push you into the rock. There is a rock in the water pool where ropes can get entangled to.",
+		"location": {
+			"canyon": "Barranco de Sorrosal",
+			"link": "https://www.docuwiki.infobarrancos.es/doku.php?id=barrancos:huesca:barranco_del_sorrosal"
+		},
+		"media": [
+			{
+				"resource": "Heraldo de Aragon",
+				"link": "https://www.heraldo.es/noticias/aragon/huesca/2024/05/10/muere-otro-barranquista-al-caer-en-un-rapel-en-yesero-1732593.html"
+			},
+			{
+				"resource": "IG video from rescue",
+				"link": "https://www.instagram.com/reel/C6br8PiIHP6"
+			}
+		]
+	},
+	{
+		"title": "Stuck in stones",
+		"country": "Spain",
+		"deceased": [
+			{
+				"name": "Unknown",
+				"age": "60",
+				"sex": "female",
+				"nationality": "Spanish"
+			}
+		],
+		"year": 2024,
+		"description": "A 60-year-old Spanish woman from Castilleja de la Cuesta (Sevilla) died drowned.",
+		"tags": ["Jaen", "Spain"],
+		"date": "15/04/2024",
+		"reason": "She got stuck between two stones at the chest. A water stream was passing over her. Died drowned.",
+		"location": {
+			"canyon": "Barranco de la Bolera",
+			"link": "https://www.docuwiki.infobarrancos.es/doku.php?id=barrancos:jaen:bolera"
+		},
+		"media": [
+			{
+				"resource": "Lo que pasa en Pozo Alcón",
+				"link": "https://loquepasaenpozoalcon.es/muere-una-mujer-al-practicar-barranquismo-en-el-guadalentin/"
+			},
+			{
+				"resource": "Cadena Ser",
+				"link": "https://cadenaser.com/andalucia/2024/04/16/asi-fue-el-arriesgado-rescate-del-cuerpo-de-la-mujer-fallecida-en-pozo-alcon-mientras-hacia-barranquismo-radio-jaen/"
+			}
+		]
+	},
+	{
+		"title": "Unknown",
+		"country": "Spain",
+		"deceased": [
+			{
+				"name": "Unknown",
+				"age": "53",
+				"sex": "female",
+				"nationality": "French"
+			}
+		],
+		"year": 2024,
+		"description": "A 53-year-old French woman passed away.",
+		"tags": ["Aragon", "Pyrenees", "Spain"],
+		"date": "14/04/2024",
+		"reason": "Unknown. Found under water.",
+		"location": {
+			"canyon": "Concusa Inferior",
+			"link": "https://www.docuwiki.infobarrancos.es/doku.php?id=barrancos:huesca:consusa_inferior"
+		},
+		"media": [
+			{
+				"resource": "El Periódico de Aragon",
+				"link": "https://www.heraldo.es/noticias/aragon/huesca/2024/05/10/muere-otro-barranquista-al-caer-en-un-rapel-en-yesero-1732593.html"
+			}
+		]
+	},
+	{
+		"title": "Leg stuck when rappeling",
+		"country": "Spain",
+		"deceased": [
+			{
+				"name": "Roberto Paz Diz",
+				"age": "35",
+				"sex": "male",
+				"nationality": "Spanish"
+			}
+		],
+		"year": 2023,
+		"description": "Roberto Paz Diz 35-year-old Spanish man from A Illa and settled in Valencia passed away after getting stuck when rappeling.",
+		"tags": ["Granada", "Spain", "Sierra Nevada"],
+		"date": "19/11/2023",
+		"reason": "Leg stuck while rappeling. Died drowned.",
+		"location": {
+			"canyon": "Barranco del río Trévelez",
+			"link": "https://www.docuwiki.infobarrancos.es/doku.php?id=barrancos:granada:trevelez"
+		},
+		"media": [
+			{
+				"resource": "Faro de Vigo",
+				"link": "https://www.farodevigo.es/arousa/2023/11/21/muere-joven-illa-barranquismo-granada-94923581.html"
+			}
+		]
+	},
+	{
+		"title": "Couple died drowned",
+		"country": "Spain",
+		"deceased": [
+			{
+				"name": "Carlos Iván Iglesias Peña",
+				"age": "43",
+				"sex": "male",
+				"nationality": "Spanish"
+			},
+			{
+				"name": "Beatriz de Cabo González",
+				"age": "37",
+				"sex": "female",
+				"nationality": "Spanish"
+			}
+		],
+		"year": 2023,
+		"description": "Carlos Iván Iglesias Peña, a 43-year-old Spaniard from Burgos and his girlfriend, Beatriz de Cabo González, a 37-year-old Spaniard from Pitiegua (Salamanca) passed away.",
+		"tags": ["Spain", "Asturias"],
+		"date": "13/09/2023",
+		"reason": "The man was found stuck between two stones. The woman was found upstream, in a waterfall. High flow after intense rain.",
+		"location": {
+			"canyon": "Barranco de Pompedru",
+			"link": "https://www.docuwiki.infobarrancos.es/doku.php?id=barrancos:asturias:pompedru"
+		},
+		"media": [
+			{
+				"resource": "Diario de Burgos",
+				"link": "https://www.diariodeburgos.es/noticia/za5657526-e0cf-3e48-8d298430beb23320/202309/muere-un-montanero-burgales-al-hacer-barranquismo-en-asturias"
+			}
+		]
+	}
+]
