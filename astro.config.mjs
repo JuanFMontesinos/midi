@@ -10,7 +10,7 @@ import sharp from 'sharp';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://juanmontesinos.com',
-  base: 'canyoning',
+  base: 'midi',
   markdown: {
     remarkPlugins: [remarkReadingTime],
     drafts: true,
